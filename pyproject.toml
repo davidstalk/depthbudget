@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "davidstalk-depthbudget"
+version = "0.1.0"
+description = "计算实际嵌套深度并与预算对比，标出超限的样本与超在哪"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "davidstalk" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://davidstalk.github.io"
+Repository = "https://github.com/davidstalk/depthbudget"
+Issues = "https://github.com/davidstalk/depthbudget/issues"
+
+[project.scripts]
+depthbudget = "depthbudget:main"
+
+[tool.setuptools]
+py-modules = ["depthbudget"]
